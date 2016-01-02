@@ -9,7 +9,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 
-public class Character extends Hero
+public class Character extends CharPoses
 {      
     int center = (int)(getWidth()/2);
         
