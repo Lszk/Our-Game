@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 /**
  *
- * @author Me4
+ * @author Me4 and me
  */
 public class Scene extends JPanel implements ActionListener {
     
