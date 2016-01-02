@@ -13,10 +13,14 @@ import javax.swing.JPanel;
  *
  * @author Me4
  */
-public class Hero extends JPanel {
+public class Hero extends JPanel 
+{
     
-    double x = 400;
-    double y = 0;
+    int x = 400;
+    int y = 50;
+    
+    int width = 40;
+    int height = 120;
     
     double speed = 0;
     double boost = 2.2;
@@ -29,13 +33,14 @@ public class Hero extends JPanel {
     int maxFallSpeed = 24;
     
     int jump = 0;
-
+    
+    
     public Hero(){
         initilize();
     }
     
-    private void initilize(){
-        
+    private void initilize()
+    {
     }
     
     public void move(){
@@ -62,16 +67,30 @@ public class Hero extends JPanel {
         }
         fallSpeedSquared += jump;
         y += fallSpeedSquared;
-        if(y > 500){
+        if(y > 400){
             fallSpeed = 0;
             jump = 0;
-            y = 500;
+            y = 400;
         }
     }
-    
-    public void paint(Graphics g) {
-        g.drawRect ((int) x, (int) y, 10, 10);  
-    }
+        
+    @Override
+        public void paint(Graphics g) 
+        {
+            Character Jerry = new Character(); 
+            Jerry.setValues(x,y,width,height);
+            Jerry.draw(g);
+         }
+        
+   /*             public void setX(int x) {
+		this.x = x;
+	}
+	
+	public void setY(int y) {
+		this.y = y;
+	}*/
+	
+
     
     public void keyPressed(KeyEvent e){
         int key = e.getKeyCode();
@@ -99,4 +118,6 @@ public class Hero extends JPanel {
             jump = -5;
         }        
     }
+    
+
 }
