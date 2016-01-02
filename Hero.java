@@ -75,21 +75,12 @@ public class Hero extends JPanel
     }
         
     @Override
-        public void paint(Graphics g) 
-        {
-            Character Jerry = new Character(); 
-            Jerry.setValues(x,y,width,height);
-            Jerry.draw(g);
-         }
-        
-   /*             public void setX(int x) {
-		this.x = x;
-	}
-	
-	public void setY(int y) {
-		this.y = y;
-	}*/
-	
+    public void paint(Graphics g) 
+    {
+        Character Jerry = new Character(); 
+        Jerry.setValues(x,y,width,height);
+        Jerry.draw(g);
+    }
 
     
     public void keyPressed(KeyEvent e){
