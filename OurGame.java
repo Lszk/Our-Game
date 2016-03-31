@@ -19,7 +19,7 @@ public class OurGame extends JFrame {
     }
     private void initilize(){
         add( new Scene() );
-        setSize(800, 600);
+        setSize(1200, 900);
         
         //setTitle('Our Game');
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
